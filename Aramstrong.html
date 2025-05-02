@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num1=+prompt("enter the start");
+        let num2=+prompt("enter the end");
+        function power(digit,num){
+            let count = calculateDigit(num);
+            let result = 1;
+            for (let i = 0; i < count; i++) {
+                result *= digit;
+            }
+            return result;
+
+        }
+        function isArmstrong(original,sumOfPowers){
+            return original === sumOfPowers;
+
+        }
+        function calculateDigit(n){
+            return n.toString().length;
+
+        }
+        function printnumber(start,end){
+            document.write(`Armstrong numbers between ${start} and ${end} are:<br><br>`);
+    
+            for (let num = start; num <= end; num++) {
+            let temp = num;
+            let sum = 0;
+
+            while (temp > 0) {
+            let digit = temp % 10;
+            sum += power(digit, num);
+            temp = Math.floor(temp / 10);
+            }
+
+            if (isArmstrong(num, sum)) {
+                document.write(`${num}<br>`);
+            }
+            }
+        
+        }
+
+          printnumber(num1,num2);
+
+        
+    </script>
+</body>
+</html>

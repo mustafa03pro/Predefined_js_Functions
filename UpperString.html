@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let namearr=[];
+        let n=+prompt("enter the array size");
+        for(let i=0;i<n;i++){
+            namearr[i]=prompt("enter the array value");
+        }
+        let uppername=namearr.map(name=>name.toUpperCase());
+        let lowername=namearr.map(name=>name.toLowerCase());
+        //let lowername=namearr.map(name=>name.);
+        console.log(`upper case ${uppername}`);
+        console.log(`lower case ${lowername}`);
+        
+    </script>
+</body>
+</html>
